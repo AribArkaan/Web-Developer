@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 74% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 74% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 74% 55%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 74% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 74% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-deadpool-black text-white font-body antialiased;
+    overflow-x: hidden;
+  }
+  
+  ::selection {
+    background: rgba(226, 54, 54, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400;
+  }
+  
+  .text-gradient-red {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-deadpool-red to-red-400;
+  }
+  
+  .film-strip {
+    background-image: radial-gradient(circle, white 2px, transparent 2px);
+    background-size: 20px 20px;
+    background-position: center;
+    opacity: 0.3;
+  }
+  
+  .film-strip-horizontal {
+    background-image: radial-gradient(circle, white 2px, transparent 2px);
+    background-size: 20px 20px;
+    background-position: center;
+    opacity: 0.3;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/10 hover:border-deadpool-red/30 hover:shadow-glow;
+  }
+  
+  .section-title {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl tracking-wider text-white uppercase;
+  }
+  
+  .section-subtitle {
+    @apply text-deadpool-red font-medium tracking-widest uppercase text-sm;
+  }
+  
+  .nav-link {
+    @apply relative text-white/70 hover:text-white transition-colors duration-300 text-sm tracking-wider uppercase;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-deadpool-red transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .badge-red {
+    @apply inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-deadpool-red text-white font-display text-xl md:text-2xl;
+  }
+  
+  .badge-dark {
+    @apply inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-deadpool-black font-display text-xl md:text-2xl;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-3 bg-deadpool-red text-white font-medium rounded-full transition-all duration-300 hover:shadow-glow hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply px-8 py-3 border border-white/30 text-white font-medium rounded-full transition-all duration-300 hover:bg-white hover:text-deadpool-black;
+  }
+  
+  .scroll-reveal {
+    /* opacity: 0; */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .skill-tag {
+    @apply px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80 transition-all duration-300 hover:bg-deadpool-red/20 hover:border-deadpool-red/50 hover:text-white;
+  }
+  
+  .project-card {
+    @apply relative overflow-hidden rounded-2xl bg-deadpool-gray border border-white/10 transition-all duration-500 hover:border-deadpool-red/50 hover:shadow-glow;
+  }
+  
+  .project-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-deadpool-black via-transparent to-transparent opacity-60 z-10;
+  }
+  
+  .project-card:hover .project-image {
+    @apply scale-110;
+  }
+  
+  .project-image {
+    @apply w-full h-full object-cover transition-transform duration-700;
+  }
+  
+  .design-card {
+    @apply relative overflow-hidden rounded-xl cursor-pointer;
+  }
+  
+  .design-card img {
+    @apply w-full h-48 md:h-64 object-cover transition-transform duration-500;
+  }
+  
+  .design-card:hover img {
+    @apply scale-110;
+  }
+  
+  .design-card::after {
+    content: '';
+    @apply absolute inset-0 bg-deadpool-red/0 transition-all duration-300;
+  }
+  
+  .design-card:hover::after {
+    @apply bg-deadpool-red/20;
+  }
+  
+  .design-overlay {
+    @apply absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  }
+  
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center;
+  }
+  
+  .modal-content {
+    @apply relative bg-deadpool-gray rounded-2xl max-w-4xl w-[90%] max-h-[90vh] overflow-auto;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #E23636;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff4444;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 40px rgba(226, 54, 54, 0.5);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+.certificates img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
