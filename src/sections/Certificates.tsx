@@ -114,7 +114,7 @@ const Certificates = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {displayedCerts.map((cert, index) => {
             const hasError = imageErrors.has(cert.id);
-            const isLoaded = loadedImages.has(cert.id);
+            // const isLoaded = loadedImages.has(cert.id);
             
             return (
               <div

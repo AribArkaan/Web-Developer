@@ -5,7 +5,7 @@ import About from './sections/About';
 import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
-import Skills from './sections/Skills';
+// import Skills from './sections/Skills';
 import Certificates from './sections/Certificates';
 import UiuxPortfolio from './sections/UiuxPortfolio';
 import Contact from './sections/Contact';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, X } from 'lucide-react';
+import { Play, X, ExternalLink } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -79,7 +79,7 @@ const Projects = () => {
       title: 'Display Informasi Waktu Shalat & Kegiatan Keagamaan',
       description: 'Sistem ini tidak hanya menampilkan informasi tetapi juga memprioritaskan transparansi penuh, khususnya dalam pengelolaan keuangan masjid dan hitung mundur jadwal salat serta pengumuman kegiatan keagamaan hingga konten pendidikan Islam interaktif.',
       skills: ['HTML5', 'CSS3', 'TailwindCSS', 'JavaScript (Vanilla/ES6)', 'Fetch API', 'Node.js', 'Express.js', 'MySQL', 'GIT'],
-      videoUrl: './aset/Display Masjid AlIkhlas.mp4',
+      videoUrl: 'https://drive.google.com/file/d/1xI95-EX_FVcgqgI0ojhILU9QxxfoDixA/preview',
       imageUrl: './aset/Thumbnail/Msajid Ailkhlas.png',
     },
     {
@@ -87,12 +87,23 @@ const Projects = () => {
       title: 'Task Management Board',
       description: 'Sistem yang dibuat diperuntukkan memanagement setiap tugas yang belum tuntas.',
       skills: ['React.js', 'CSS3', 'TailwindCSS', 'GIT'],
-      videoUrl: './aset/Trello.mp4',
+      videoUrl: 'https://drive.google.com/file/d/1wCrYEUIn62UomYDJ6ZCQNUOjM0ooHVl8/preview',
       imageUrl: './aset/Thumbnail/Trello.png',
     },
   ];
 
+  // Helper: cek tipe video
   const isYouTube = (url: string) => url.includes('youtube.com') || url.includes('youtu.be');
+  const isGoogleDrive = (url: string) => url.includes('drive.google.com');
+
+  // Helper: konversi Google Drive share link ke embed link
+  const getDriveEmbedUrl = (url: string) => {
+    const fileIdMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (fileIdMatch && fileIdMatch[1]) {
+      return `https://drive.google.com/file/d/${fileIdMatch[1]}/preview`;
+    }
+    return url;
+  };
 
   return (
     <section id="projects" className="relative py-24 md:py-32 bg-deadpool-black overflow-hidden">
@@ -234,13 +245,21 @@ const Projects = () => {
                 <X size={20} />
               </button>
 
-              {/* Video */}
+              {/* Video Player */}
               <div className="aspect-video bg-black w-full">
                 {isYouTube(selectedProject.videoUrl) ? (
                   <iframe
                     src={selectedProject.videoUrl}
                     title={selectedProject.title}
                     className="w-full h-full"
+                    allowFullScreen
+                  />
+                ) : isGoogleDrive(selectedProject.videoUrl) ? (
+                  <iframe
+                    src={getDriveEmbedUrl(selectedProject.videoUrl)}
+                    title={selectedProject.title}
+                    className="w-full h-full"
+                    allow="autoplay"
                     allowFullScreen
                   />
                 ) : (
@@ -255,9 +274,22 @@ const Projects = () => {
 
               {/* Info */}
               <div className="p-6 md:p-8">
-                <h3 className="font-display text-2xl md:text-3xl text-white mb-3">
-                  {selectedProject.title}
-                </h3>
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="font-display text-2xl md:text-3xl text-white">
+                    {selectedProject.title}
+                  </h3>
+                  {isGoogleDrive(selectedProject.videoUrl) && (
+                    <a
+                      href={selectedProject.videoUrl.replace('/preview', '/view')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-deadpool-red hover:text-white transition-colors text-sm"
+                    >
+                      <ExternalLink size={14} />
+                      <span>Open in Drive</span>
+                    </a>
+                  )}
+                </div>
                 <p className="text-white/60 mb-6 leading-relaxed">{selectedProject.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.skills.map((skill) => (
