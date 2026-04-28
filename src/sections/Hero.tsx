@@ -149,7 +149,7 @@ const Hero = () => {
                 {/* Image placeholder - will be replaced with actual image */}
                 <div className="absolute inset-8 rounded-full overflow-hidden bg-gradient-to-br from-deadpool-gray to-deadpool-black flex items-center justify-center">
                   <img
-                    src="/aset/IMG-20240311-WA0018.jpg"
+                    src="/public/aset/IMG-20240311-WA0018.jpg"
                     alt="Arib Arkaan Fadhullah"
                     className="w-full h-full object-cover"
                     onError={(e) => {

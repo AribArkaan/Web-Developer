@@ -8,7 +8,7 @@ const Experience = () => {
       type: 'Part-time',
       period: 'Maret 2025 - Juni 2025',
       location: 'Bandung',
-      logo: '/aset/download__2_-removebg-preview.png',
+      logo: '/public/aset/download__2_-removebg-preview.png',
       responsibilities: [
         'Membantu mahasiswa memahami konsep dasar Mengolah data dengan python',
         'Membimbing praktikum dan memberikan solusi terhadap permasalahan coding',
@@ -23,7 +23,7 @@ const Experience = () => {
       type: 'Internship',
       period: 'November 2024 - Januari 2025',
       location: 'Bandung',
-      logo: '/aset/icon pentacode.jpeg',
+      logo: '/public/aset/icon pentacode.jpeg',
       responsibilities: [
         'Mengembangkan dan memelihara fitur baru pada website perusahaan',
         'Bekerja dengan Laravel, PHP, dan JavaScript untuk backend dan frontend',
@@ -37,7 +37,7 @@ const Experience = () => {
       type: 'Part-time',
       period: 'Februari 2024 - Mei 2024',
       location: 'Bandung',
-      logo: '/aset/download__2_-removebg-preview.png',
+      logo: '/public/aset/download__2_-removebg-preview.png',
       responsibilities: [
         'Membantu mahasiswa memahami konsep dasar OOP dalam pemrograman',
         'Membimbing praktikum dan memberikan solusi terhadap permasalahan coding',
