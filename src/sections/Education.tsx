@@ -8,7 +8,7 @@ const Education = () => {
       period: '2021 - 2026',
       duration: '4 tahun 4 bulan',
       gpa: '3.34',
-      logo: '/public/aset/download__2_-removebg-preview.png',
+      logo: '/aset/download__2_-removebg-preview.png',
       type: 'education',
     },
     {
@@ -17,7 +17,7 @@ const Education = () => {
       period: '2019 - 2021',
       duration: '',
       gpa: '',
-      logo: '/public/aset/download__1_-removebg-preview.png',
+      logo: '/aset/download__1_-removebg-preview.png',
       type: 'education',
     },
   ];
@@ -29,7 +29,7 @@ const Education = () => {
       period: 'Feb 2024 - Jun 2024',
       duration: '',
       gpa: '',
-      logo: '/public/aset/bangkit_academy_logo.jpeg',
+      logo: '/aset/bangkit_academy_logo.jpeg',
       type: 'bootcamp',
       organizer: 'led by Google, Tokopedia, Gojek, & Traveloka',
     },

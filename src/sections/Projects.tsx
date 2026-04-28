@@ -20,8 +20,8 @@ const Projects = () => {
       title: 'Web Masjid Al-Kautsar',
       description: 'Website untuk manajemen dan informasi masjid dengan fitur jadwal sholat, kajian, dan donasi.',
       skills: ['Front-end', 'Back-end', 'TailwindCSS', 'PHP', 'Laravel', 'JS', 'GIT'],
-      videoUrl: '/public/aset/masjid al-kautsar2.mp4',
-      imageUrl: '/public/aset/Thumbnail/Masjid.png',
+      videoUrl: '/aset/masjid al-kautsar2.mp4',
+      imageUrl: '/aset/Thumbnail/Masjid.png',
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const Projects = () => {
       description: 'Sistem absensi digital menggunakan RFID card dengan integrasi IoT (ESP32).',
       skills: ['UI/UX', 'PHP', 'SQL', 'IoT (ESP32)', 'RFID Card', 'GIT'],
       videoUrl: 'https://www.youtube.com/embed/4y_PIJkq2rw',
-      imageUrl: '/public/aset/Thumbnail/RFID-Absensi.png',
+      imageUrl: '/aset/Thumbnail/RFID-Absensi.png',
     },
     {
       id: 3,
@@ -37,15 +37,15 @@ const Projects = () => {
       description: 'Sistem monitoring dan kontrol greenhouse berbasis IoT untuk pertanian pintar.',
       skills: ['IoT (ESP32)', 'Front-end Developer', 'MQTT', 'GIT'],
       videoUrl: 'https://www.youtube.com/embed/QQqWoY3z1-U?si=rikyk294nFqnz2dD',
-      imageUrl: '/public/aset/Thumbnail/Plantroid.png',
+      imageUrl: '/aset/Thumbnail/Plantroid.png',
     },
     {
       id: 4,
       title: 'Web Ardes.Studio',
       description: 'Website konsultan arsitek dengan portofolio proyek dan sistem konsultasi online.',
       skills: ['Front-end', 'Back-end', 'TailwindCSS', 'JS', 'GIT'],
-      videoUrl: '/public/aset/Ardes-Studio.mp4',
-      imageUrl: '/public/aset/Thumbnail/Ardes-Studio.png',
+      videoUrl: '/aset/Ardes-Studio.mp4',
+      imageUrl: '/aset/Thumbnail/Ardes-Studio.png',
     },
   ];
 
@@ -55,24 +55,24 @@ const Projects = () => {
       title: 'Deteksi Makanan dengan AI',
       description: 'Sistem pengenalan makanan menggunakan teknologi AI dan Google Cloud.',
       skills: ['Google Cloud', 'Machine Learning', 'Python'],
-      videoUrl: '/public/aset/video demonstran.mp4',
-      imageUrl: '/public/aset/Thumbnail/RasaGram.png',
+      videoUrl: '/aset/video demonstran.mp4',
+      imageUrl: '/aset/Thumbnail/RasaGram.png',
     },
     {
       id: 6,
       title: 'Unsafe Sitting Distance',
       description: 'Metode peringatan untuk menjaga jarak pandangan dari layar monitor.',
       skills: ['Machine Learning', 'Python', 'GIT'],
-      videoUrl: '/public/aset/demo video.mp4',
-      imageUrl: '/public/aset/Thumbnail/WOW.png',
+      videoUrl: '/aset/demo video.mp4',
+      imageUrl: '/aset/Thumbnail/WOW.png',
     },
     {
       id: 7,
       title: 'Deteksi Glaukoma AI',
       description: 'Sistem pengecekan citra mata untuk deteksi penyakit glaukoma menggunakan AI.',
       skills: ['Python', 'Deep Learning', 'AI', 'ResNext', 'CBAM', 'GIT'],
-      videoUrl: '/public/aset/Deteksi Glaukoma AI + CDR - Personal - Microsoft​ Edge 2026-01-29 18-10-28.mp4',
-      imageUrl: '/public/aset/Thumbnail/Glaukoma.png',
+      videoUrl: '/aset/Deteksi Glaukoma AI + CDR - Personal - Microsoft​ Edge 2026-01-29 18-10-28.mp4',
+      imageUrl: '/aset/Thumbnail/Glaukoma.png',
     },
     {
       id: 8,
@@ -80,7 +80,7 @@ const Projects = () => {
       description: 'Sistem ini tidak hanya menampilkan informasi tetapi juga memprioritaskan transparansi penuh, khususnya dalam pengelolaan keuangan masjid dan hitung mundur jadwal salat serta pengumuman kegiatan keagamaan hingga konten pendidikan Islam interaktif.',
       skills: ['HTML5', 'CSS3', 'TailwindCSS', 'JavaScript (Vanilla/ES6)', 'Fetch API', 'Node.js', 'Express.js', 'MySQL', 'GIT'],
       videoUrl: 'https://drive.google.com/file/d/1xI95-EX_FVcgqgI0ojhILU9QxxfoDixA/preview',
-      imageUrl: '/public/aset/Thumbnail/Msajid Ailkhlas.png',
+      imageUrl: '/aset/Thumbnail/Msajid Ailkhlas.png',
     },
     {
       id: 9,
@@ -88,7 +88,7 @@ const Projects = () => {
       description: 'Sistem yang dibuat diperuntukkan memanagement setiap tugas yang belum tuntas.',
       skills: ['React.js', 'CSS3', 'TailwindCSS', 'GIT'],
       videoUrl: 'https://drive.google.com/file/d/1wCrYEUIn62UomYDJ6ZCQNUOjM0ooHVl8/preview',
-      imageUrl: '/public/aset/Thumbnail/Trello.png',
+      imageUrl: '/aset/Thumbnail/Trello.png',
     },
   ];
 

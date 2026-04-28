@@ -54,7 +54,7 @@ const Contact = () => {
 
   // Data CV — hanya file PDF
   const cvData = {
-    pdfUrl: '/public/aset/CV/CV_Arib_Arkaan.pdf',
+    pdfUrl: '/aset/CV/CV_Arib_Arkaan.pdf',
   };
 
   return (
